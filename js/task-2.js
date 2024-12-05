@@ -7,6 +7,7 @@
 class Storage {
   constructor(items) {
   this.items = [items];}
+  getItems(){return this.items;}
 }
 const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
