@@ -14,7 +14,7 @@ class StringBuilder {
     return this.#value;
   }
   padEnd(str){ return this.#value.push(str);
-}
+}}
 const builder = new StringBuilder('.');
 console.log(builder.getValue()); // "."
 builder.padStart('^');
