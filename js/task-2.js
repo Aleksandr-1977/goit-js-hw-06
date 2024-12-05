@@ -8,7 +8,11 @@ class Storage {
   constructor(items) {
   this.items = items;
   }
-  getItems(){return this.items;}
+  getItems(){return this.items;
+  }
+  addItem(newItem){
+    return this.items.push(newItem);
+  }
   
 }
 const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
