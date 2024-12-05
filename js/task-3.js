@@ -7,19 +7,27 @@
 // Візьми код нижче з ініціалізацією екземпляра й викликами методів і встав його після оголошення класу для перевірки коректності роботи. У консоль будуть виведені результати їх роботи. Будь ласка, нічого там не змінюй.
 class StringBuilder {
   #value;
-  constructor (initialValue){
+  constructor(initialValue) {
     this.#value = initialValue;
   }
-  getValue(){
+  getValue() {
     return this.#value;
   }
-  padEnd(str){ return this.#value.push(str);
-}}
+  padEnd(str) {
+    return (this.#value += str);
+  }
+  padStart(str) {
+    return (this.#value = str + this.#value);
+  }
+  padBoth(str) {
+    return (this.#value = str + this.#value + str);
+  }
+}
 const builder = new StringBuilder('.');
 console.log(builder.getValue()); // "."
 builder.padStart('^');
 console.log(builder.getValue()); // "^."
-// builder.padEnd('^');
-// console.log(builder.getValue()); // "^.^"
-// builder.padBoth('=');
-// console.log(builder.getValue()); // "=^.^="
+builder.padEnd('^');
+console.log(builder.getValue()); // "^.^"
+builder.padBoth('=');
+console.log(builder.getValue()); // "=^.^="
