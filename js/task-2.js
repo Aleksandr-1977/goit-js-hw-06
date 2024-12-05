@@ -14,7 +14,10 @@ class Storage {
     return this.items.push(newItem);
   }
   removeItem(itemToRemove){
-    return this.items.slice(itemToRemove);
+    const valueToRemove = itemToRemove;
+    const ind = this.items.indexOf(valueToRemove);
+    if (ind > -1) {this.items.splice(ind,1);}
+      return this.items;
   }
   
 }
