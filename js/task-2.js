@@ -8,7 +8,7 @@ class Storage {
   #items;
   constructor(items) {
   this.#items = [];}
-  getItems(){return this.#items;}
+  getItems(){return this.items;}
   addItem(newItem){return this.#items=newItem.push(this.#items);
 }
   removeItem(itemToRemove){ return this.items
