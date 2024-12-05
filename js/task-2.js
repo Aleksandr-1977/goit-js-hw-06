@@ -13,6 +13,9 @@ class Storage {
   addItem(newItem){
     return this.items.push(newItem);
   }
+  removeItem(itemToRemove){
+    return this.items.slice(itemToRemove);
+  }
   
 }
 const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
