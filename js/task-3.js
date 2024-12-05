@@ -13,11 +13,12 @@ class StringBuilder {
   getValue(){
     return this.#value;
   }
+  padEnd(str){ return this.#value.push(str);
 }
 const builder = new StringBuilder('.');
 console.log(builder.getValue()); // "."
-// builder.padStart('^');
-// console.log(builder.getValue()); // "^."
+builder.padStart('^');
+console.log(builder.getValue()); // "^."
 // builder.padEnd('^');
 // console.log(builder.getValue()); // "^.^"
 // builder.padBoth('=');
